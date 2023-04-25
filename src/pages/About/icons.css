@@ -1,0 +1,9 @@
+.icons a i {
+    margin: 0 10px;
+    transition: 0.3s;
+
+}
+
+.icons a i:hover {
+    font-size: 70px;
+}

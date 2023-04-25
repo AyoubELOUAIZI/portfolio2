@@ -1,0 +1,99 @@
+.Cardstitle {
+    /* background: linear-gradient(45deg, #e3a806, #70120b); */
+    padding: 10px;
+    text-align: center;
+    transition: all 2s ease;
+}
+
+.Cardstitle:hover {
+    font-size: 40px;
+    padding-bottom: 2%;
+}
+
+/* --------------------------------------- */
+.Cardstitle {
+    /* background: linear-gradient(45deg, #e3a806, #70120b); */
+    /* padding: 10px;
+    text-align: center;
+    animation: grow-shrink 3s ease-in-out infinite alternate; */
+}
+
+@keyframes grow-shrink {
+    /* from {
+        font-size: 30px;
+        padding-bottom: 1%;
+    }
+
+    to {
+        font-size: 40px;
+        padding-bottom: 2%;
+    } */
+}
+
+/* --------------------------------------- */
+
+.Cardcontainer {
+    /* height: 100vh; */
+    overflow: hidden;
+    /* background: linear-gradient(45deg, #e3a806, #70120b); */
+    font-family: Helvetica, sans-serif;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 90px 0;
+}
+
+.Cardcontainer .container {
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
+    border-radius: 10px;
+}
+
+.Cardcontainer .container img {
+    border-radius: 2rem;
+}
+
+.Cardcontainer .container:hover>.card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.Cardcontainer .card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* transition: transform 1500ms; */
+    transition: all 2s ease;
+    transform-style: preserve-3d;
+    /* margin: 10px 0; */
+    border-radius: 2rem;
+}
+
+.Cardcontainer .front,
+.Cardcontainer .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    /* box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25); */
+    background: linear-gradient(45deg, #2a36dd, #e713fa);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* 
+.Cardcontainer .front {
+    background-image: url(https://source.unsplash.com/random/350x500);
+} */
+
+.Cardcontainer .back {
+    background-color: #3a3a3a;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
